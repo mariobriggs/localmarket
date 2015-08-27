@@ -51,7 +51,7 @@ Template.recipe.helpers({
     return Meteor.user() && _.include(Meteor.user().bookmarkedRecipeNames, this.name);
   },
   activities: function() {
-    return Activities.find({recipeName: this.name}, {sort: {date: -1}});
+    return Activities.find({recipeName: this.name}, {sort: {date: 'desc'}});
   }
 });
 

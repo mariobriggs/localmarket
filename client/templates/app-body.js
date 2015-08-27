@@ -19,7 +19,7 @@ Deps.autorun(function() {
   nextInitiator = null;
 });
 
-var notifications = new Mongo.Collection(null);
+var notifications = new CouchDB.Database(null);
 
 Template.appBody.addNotification = function(notification) {
   var id = notifications.insert(notification);

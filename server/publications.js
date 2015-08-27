@@ -3,7 +3,7 @@ Meteor.publish('bookmarkCounts', function() {
 });
 
 Meteor.publish('news', function() {
-  return News.find({}, {sort: {date: -1}, limit: 1});
+  return News.find({date: {$gt: '0'}}, {sort: {date: 'desc'},  limit: 1});
 });
 
 Meteor.publish('latestActivity', function () {
@@ -11,7 +11,7 @@ Meteor.publish('latestActivity', function () {
 });
 
 Meteor.publish('feed', function() {
-  return Activities.find({}, {sort: {date: -1}, limit: 10});
+  return Activities.find({date: {$gt: '0'}}, {sort: {date: 'desc'}, limit: 10});
 });
 
 Meteor.publish('recipe', function(name) {
