@@ -21,7 +21,7 @@ $ meteor create --example localmarket
 $ cd localmarket
 
 // copy over the changes for couchdb
-$ cp -rf ./repo/ .
+$ cp -rf ../repo/ .
 
 // install couchdb meteor module
 $ meteor add cloudant:couchdb
